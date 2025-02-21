@@ -112,9 +112,23 @@ main .container{
     padding: 20px 20px;    
 }
 .container img{
-    height: 220px
+    height: 200px;
+}
+.image-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.image-item span:hover{
+    transform: scale(1.15);
+    transition: transform 0.4s;
+    /* color: red; */
+    color: rgb(117, 221, 229);
 }
 footer{
+    margin-top:120px;
     background-color: rgba(117, 221, 229, 0.7) !important;
     align-self: flex-end;
     width: 100%;
