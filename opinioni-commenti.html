@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opinioni e Commenti</title>
+    <link rel="stylesheet" href="opinioni-commenti.css">
+    <script src="opinioni-commenti.js"></script>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.css">
+    <script src="../bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+</head>
+<body>
+    <a href="home.html">&lt; Home</a>
+    <header>
+        <h1>Opinioni e Commenti</h1>
+        <span>Benvenuto nella sezioni commenti e opinioni. In questa pagina potrai esprimere le tue opinioni riguardo alcune teorie
+            o scene di anime che ti hanno colpito di più. Sentiti libero di parlare di tutto quello vuoi, ma ricorda di rispettare le opinioni degli altri,
+            Basterà solo specificare il tuo nickname e l' anime di cui vuoi parlare. Inoltre se ti interessano solo le teorie e le opinioni di un solo anime in particolare 
+            ricordiamo che è presente una barra ricerca in cui ti basterà soltanto specificare l' anime che ti interessa. 
+            Prima di lasciarti ai commenti e le opinioni volevo darti un ultimo avviso che forse è il più importante di tutti, <b>ALLERTA SPOILER</b>.
+        </span>
+    </header>
+    <section>
+        <div>
+            <input type="search" id="searcher" placeholder="Cerca anime..." onchange="filter()">
+            <button id="pubblica" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Aggiungi Commento
+            </button>
+            <div class="modal fade" tabindex="-1" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title">Specifica l' anime di cui vuoi parlare e il nickname</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" id="nickname" placeholder="Nickname">
+                            <input type="text" id="anime" placeholder="Anime">
+                            <textarea id="commento" placeholder="Commento"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" style="background-color: rgb(117, 221, 229);" id="button-save">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="commenti">
+        <h2>Commenti</h2>
+        <!--<div class="commento">
+            <h3>Commento di: Nickname</h3>
+            <h5>(Anime)</h5>
+            <p id="commento"></p>
+        </div> -->
+    </div>
+</body>
+</html>
