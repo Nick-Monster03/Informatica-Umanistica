@@ -4,19 +4,89 @@ let id_commento=archivio.lenght -1  || 0; // Contatore per gli id dei commenti
 
 let btn_salva= document.getElementById('button-save');
 btn_salva.addEventListener('click', aggiungi);
-function filter(){
-    let search_bar= dpocument.getElementById('search-bar');
-    let search_word= search_bar.value.toLowerCase();
-    console.log(archivio)
+let search_bar = document.getElementById('searcher');
+
+    search_bar.addEventListener('input', () => {
+    let search_word = search_bar.value.toLowerCase();
+    let risultati = filter(search_word);
+    console.clear(); 
+    console.log("Risultati trovati:", risultati);
+    let sezione = document.getElementById('commenti');
+    sezione.innerHTML = ''; // Clear previous results
+    for (let anime in risultati) {
+        risultati[anime].forEach(comment => {
+            let nickname = comment.nickname;
+            let commento = comment.commento;
+
+            let div = document.createElement('div');
+            div.className = 'commento';
+
+            let h3 = document.createElement('h3');
+            h3.innerHTML = nickname;
+            div.appendChild(h3);
+
+            let h5 = document.createElement('h5');
+            h5.innerHTML = anime;
+            div.appendChild(h5);
+
+            let p = document.createElement('p');
+            p.innerHTML = commento;
+            div.appendChild(p);
+
+            sezione.appendChild(div);
+        });
+    }
+});
+stampa10();
+function stampa10(){
+    let count = 0;
+    let temp= JSON.parse(localStorage.getItem("archivio")) || {};
+    for (let anime in temp) {
+        if (count >= 10) break;
+            temp[anime].forEach(comment => {
+            if (count >= 10) return;
+           
+            let nickname= comment.nickname;
+            let commento=comment.commento;
+            let sezione=document.getElementById('commenti');
+
+            let div= document.createElement('div');
+            div.className='commento';
+        
+            let h3= document.createElement('h3');
+            h3.innerHTML= nickname;
+            div.appendChild(h3);
+        
+            let h5= document.createElement('h5');
+            h5.innerHTML= anime;
+            div.appendChild(h5);
+        
+            let p= document.createElement('p');
+            p.innerHTML= commento;
+            div.appendChild(p);
+        
+            sezione.appendChild(div);
+            // count++;
+        });
+    }
+}
+function filter(search_word){
+    let risultati = Object.keys(archivio).filter(anime => 
+        anime.toLowerCase().startsWith(search_word)
+    );
+    return risultati.reduce((obj, key) => {
+        obj[key] = archivio[key];
+        return obj;
+    }, {});
 }
 function aggiungi(){
     let sezione=document.getElementById('commenti');
     let nickname= document.getElementById('nickname').value;
     let anime=document.getElementById('anime').value;
     let commento=document.getElementById('commento').value;
-    console.log('Nickname:', nickname);
-    console.log('Anime:', anime);
-    console.log('Commento:', commento);
+    // console.log('Nickname:', nickname);
+    // console.log('Anime:', anime);
+    // console.log('Commento:', commento);
 
     if(nickname=='' || anime=='' || commento==''){
         alert('Compila tutti i campi');
@@ -31,12 +101,12 @@ function aggiungi(){
                 alert('Questo commento esiste già per questo anime');
                 return;
             }else{
-                archivio[anime].push({commento: commento});
-                console.log(archivio);
+                archivio[anime].push({commento: commento, nickname: nickname});
+                // console.log(archivio);
             }
         }else{
-            archivio[anime] = [{commento: commento}];
-            console.log(archivio);
+            archivio[anime] = [{commento: commento, nickname: nickname}];
+            // console.log(archivio);
         }
         let div= document.createElement('div');
         div.id= id_commento;
@@ -58,7 +128,7 @@ function aggiungi(){
         id_commento++;
 
         localStorage.setItem("archivio", JSON.stringify(archivio));
-        console.log(archivio);
+
         }   
     }
     
