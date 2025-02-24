@@ -13,6 +13,10 @@ body {
     background-color: black !important; 
     text-align: center;
 }
+a{
+    text-decoration: none !important;
+    color: #ffffff !important;
+}
 body>div{
     padding: 0px !important;
     background-color:#222022;
@@ -59,20 +63,18 @@ header>h1{
          0px 0px 40px rgba(255, 255, 255, 0.8);
     transform: scale(1.05);
 }
-header>nav{
-    display: flex;
-    justify-content: space-around;
+header .navbar{
     align-items: center;
     width: 100%;
-    background-color: rgba(0,0,0);
+    background-color: rgba(0,0,0) !important;
     padding: 20px 0;
     position: fixed;      
 }
-header>nav>a{
-    text-decoration: none;
-    color: #ffffff;
+header .navbar a{
+    text-decoration: none !important;
+    color: #ffffff !important;
 }
-header>nav>a:hover{
+header .navbar a:hover{
     text-decoration: none;
     transform: scale(1.25);
     color: #ffffff;
@@ -95,6 +97,10 @@ main{
     gap:40px;
     padding: 20px 20px;
 }
+.studios h3{
+    margin-bottom:15px;
+}
+
 main>div:not(.separator) {
     width: 100%;
     background-color: rgba(0,0,0,0.7);
@@ -120,6 +126,15 @@ main .container{
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+.image-item a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none !important;
+    color: #ffffff !important;
 }
 .image-item span:hover{
     transform: scale(1.15);

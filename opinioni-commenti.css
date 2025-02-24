@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    padding-right:50px;
-    padding-left: 50px;
+    padding-right:100px;
+    padding-left: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -19,12 +19,24 @@ body{
     position: relative;
     color: white !important;
 }
-a{
+#home, #top{
     text-decoration: none !important;
-    position: absolute;
+    position: fixed;
     color: white !important;
+}
+#home{
     top: 20px;
     left: 30px;
+}
+#top{
+    top: 20px;
+    right: 30px;
+    background-color: rgb(117, 221, 229);
+    height:35px;
+    width:35px;
+    text-align: center; 
+    align-items: center;
+    font-size: 30px;
 }
 a:hover{
     transform: scale(1.25);

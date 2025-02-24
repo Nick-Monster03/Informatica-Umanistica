@@ -13,14 +13,16 @@
     <div>
         <header>
             <h1>Tokyo Community</h1>
-            <nav style="padding-right: 25px; padding-left: 25px;">
-                <a href="#chiSiamo">Chi Siamo</a>
-                <a href="#studio-ghibli">Studio Ghibli</a>
-                <a href="#mappa">Mappa</a>
-                <a href="#toei-animation">Toei Animation</a>
-                <a href="#pierrot">Pierrot</a>
-                <a href="opinioni-commenti.html">Opinioni e commenti</a>
-                <a href="Documentazione.html">Documentazione</a>
+            <nav class="navbar bg-body-tertiary" style="padding-right: 25px; padding-left: 25px;">
+                <div class="container">
+                    <a href="#chiSiamo" class="navbar-brand">Chi Siamo</a>
+                    <a href="#studio-ghibli" class="navbar-brand">Studio Ghibli</a>
+                    <a href="#mappa" class="navbar-brand">Mappa</a>
+                    <a href="#toei-animation" class="navbar-brand">Toei Animation</a>
+                    <a href="#pierrot" class="navbar-brand">Pierrot</a>
+                    <a href="opinioni-commenti.html" class="navbar-brand">Opinioni e commenti</a>
+                    <a href="Documentazione.html" class="navbar-brand">Documentazione</a>
+                </div>
             </nav>
         </header>
         <main>
@@ -43,12 +45,14 @@
                     Buona navigazione!</p>
             </div>
             <div class="separator" id="studio-ghibli" style="height: 170px; background-color: none;"></div>
-            <div>
-                <h3>Studio Ghibli</h3>
+            <div class="studios">
+                <h3><a href="StudioGhilbi.html">Studio Ghibli</a></h3>
                 <div class="container col-12">
                     <div class="image-item" class="col-2">
-                        <img src="images/Studio Ghilbi/Il mio Vicino Totoro.jpg" alt="" >
-                        <span>Il mio Vicino Totoro</span>
+                        <a href="StudioGhilbi.html#Kiki">
+                            <img src="images/Studio Ghilbi/Il mio Vicino Totoro.jpg" alt="" >
+                            <span>Il mio Vicino Totoro</span>
+                        </a>
                     </div>
                     <div class="image-item" class="col-2">
                         <img src="images/Studio Ghilbi/Il castello errante di owl.jpg" alt="" >
@@ -69,7 +73,7 @@
                 </div>
             </div>
             <div class="separator" id="mappa" style="height: 170px; background-color: none;"></div>
-            <div>
+            <div class="studios">
                 <h3>Mappa</h3>
                 <div class="container col-12">
                     <div class="image-item" class="col-2">
@@ -95,58 +99,54 @@
                 </div>
             </div>
             <div class="separator" id="toei-animation" style="height: 170px; background-color: none;"></div>
-            <div>
-                <div>
-                    <h3>Toei Animation</h3>
-                    <div class="container col-12">
-                        <div class="image-item" class="col-2">
-                            <img src="images/Toei Animation/dragonBall.jpg" alt="" >
-                            <span>Dragon Ball Z</span>
-                        </div>
-                        <div class="image-item" class="col-2">
-                            <img src="images/Toei Animation/Ken il guerriero.jpg" alt="" >
-                            <span>Ken Il Guerriero</span>
-                        </div>
-                        <div class="image-item" class="col-2">
-                            <img src="images/Toei Animation/OnePiece.jpg" alt="" >
-                            <span>One Piece</span>
-                        </div>
-                        <div class="image-item" class="col-2">
-                            <img src="images/Toei Animation/SailorMoon.jpg" alt="" >
-                            <span>Sailor Moon</span>
-                        </div>
-                        <div class="image-item" class="col-2">
-                            <img src="images/Toei Animation/I Cavalieri dello Zodiaco.jpg" alt="" >
-                            <span>Cavalieri dello Zodiaco</span>
-                        </div>
+            <div class="studios">
+                <h3>Toei Animation</h3>
+                <div class="container col-12">
+                    <div class="image-item" class="col-2">
+                        <img src="images/Toei Animation/dragonBall.jpg" alt="" >
+                        <span>Dragon Ball Z</span>
+                    </div>
+                    <div class="image-item" class="col-2">
+                        <img src="images/Toei Animation/Ken il guerriero.jpg" alt="" >
+                        <span>Ken Il Guerriero</span>
+                    </div>
+                    <div class="image-item" class="col-2">
+                        <img src="images/Toei Animation/OnePiece.jpg" alt="" >
+                        <span>One Piece</span>
+                    </div>
+                    <div class="image-item" class="col-2">
+                        <img src="images/Toei Animation/SailorMoon.jpg" alt="" >
+                        <span>Sailor Moon</span>
+                    </div>
+                    <div class="image-item" class="col-2">
+                        <img src="images/Toei Animation/I Cavalieri dello Zodiaco.jpg" alt="" >
+                        <span>Cavalieri dello Zodiaco</span>
                     </div>
                 </div>
             </div>
             <div class="separator" id="pierrot" style="height: 170px; background-color: none;"></div>
-            <div>
-                <div>
-                    <h3>Pierrot</h3>
-                    <div class="container col-12">
-                        <div class="image-item" class="col-2">
-                            <img src="images/Pierrot/black clover.jpg" alt="" >
-                            <span>Black Clover</span>
-                        </div>
-                        <div class="image-item" class="col-2">
-                            <img src="images/Pierrot/Naruto.jpg" alt="" >
-                            <span>Naruto</span>
-                        </div>
-                        <div class="image-item" class="col-2">
-                            <img src="images/Pierrot/bleach.jpg" alt="" >
-                            <span>Bleach</span>
-                        </div>
-                        <div class="image-item" class="col-2">
-                            <img src="images/Pierrot/Tokyo ghoul.jpg" alt="" >
-                            <span>Tokyo Ghoul</span>
-                        </div>
-                        <div class="image-item" class="col-2">
-                            <img src="images/Pierrot/Yu Yu Hukusho.jpg" alt="" >
-                            <span>Yu Yu Hukusho</span>
-                        </div>
+            <div class="studios">
+                <h3>Pierrot</h3>
+                <div class="container col-12">
+                    <div class="image-item" class="col-2">
+                        <img src="images/Pierrot/black clover.jpg" alt="" >
+                        <span>Black Clover</span>
+                    </div>
+                    <div class="image-item" class="col-2">
+                        <img src="images/Pierrot/Naruto.jpg" alt="" >
+                        <span>Naruto</span>
+                    </div>
+                    <div class="image-item" class="col-2">
+                        <img src="images/Pierrot/bleach.jpg" alt="" >
+                        <span>Bleach</span>
+                    </div>
+                    <div class="image-item" class="col-2">
+                        <img src="images/Pierrot/Tokyo ghoul.jpg" alt="" >
+                        <span>Tokyo Ghoul</span>
+                    </div>
+                    <div class="image-item" class="col-2">
+                        <img src="images/Pierrot/Yu Yu Hukusho.jpg" alt="" >
+                        <span>Yu Yu Hukusho</span>
                     </div>
                 </div>
             </div>
