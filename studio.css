@@ -79,34 +79,15 @@ main{
     background-color: black !important;
     color: white !important;
 }
-
-.section {
-  background: #f45b69;
-  padding: 50px 0;
+img{
+  height: 100% !important;
 }
 
-.section .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.section h1 {
-  font-size: 2.5rem;
-}
-
-.section h2 {
-  font-size: 1.3rem;
-}
-
-/* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
-  margin-left: 100px;
+  margin-left: 150px;
 }
 
 .timeline ol {
@@ -194,9 +175,6 @@ main{
   font-weight: bold;
   margin-bottom: 8px;
 }
-
-/* TIMELINE ARROWS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline .arrows {
   display: flex;
