@@ -37,7 +37,10 @@ a{
 }
 .item1{background-color: black !important;}
 a:hover{
-    transform: scale(1.25);
+    transform: scale(1.20);
     color: rgb(117, 221, 229) !important;
     transition: transform 0.4s;
+}
+#navbar-example3>nav>a:nth-child(1){
+    color: white !important;
 }
