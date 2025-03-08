@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.css">
     <script src="../bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="menageLine.js"></script>
 </head>
 <body>
     <div class="dropdown"><!--indici per parole chiavi-->
@@ -33,35 +34,36 @@
                 </div>
             </div>
         </div>
-        <section class="timeline" style='background-color:black;'>
+        <h3 style="margin-top: 70px; margin-bottom: 30px; font-family: 'Comic Sans MS', 'Comic Sans', cursive; font-size: 1.5em;">Date di uscita degli anime in ordine temporale</h3>
+        <section class="timeline">
             <ol>
-              <li>
-                <div>
-                  <time>1984</time> Ken Il guerriero
+            <li onclick="toggleEvent('event1')">
+            <div id="event1">
+            <time>15 Marzo 1984</time> Ken Il guerriero
+            </div>
+            </li>
+            <li onclick="toggleEvent('event2')">
+            <div id="event2">
+                <time>11 Ottobre 1986</time> I cavalieri dello zodiaco
                 </div>
-              </li>
-              <li>
-                <div>
-                  <time>1986</time> I cavalieri dello zodiaco
+            </li>
+            <li onclick="toggleEvent('event3')">
+                <div id="event3">
+                <time>26 Aprile 1989</time> Dragon Ball Z
                 </div>
-              </li>
-              <li>
-                <div>
-                  <time>1989</time> Dragon Ball Z
+            </li>
+            <li onclick="toggleEvent('event4')">
+                <div id="event4">
+                <time>7 Marzo 1992</time> Sailor Moon
                 </div>
-              </li>
-              <li>
-                <div>
-                  <time>1992</time> Sailor Moon
+            </li>
+            <li onclick="toggleEvent('event5')">
+                <div id="event5">
+                <time>20 Ottobre 1999</time> One Piece
                 </div>
-              </li>
-              <li>
-                <div>
-                  <time>1999</time> One Piece
-              </li>
-              <li>
-              </li>
-              
+            </li>
+            <li></li>
+            </ol>
         </section>
         <input type="search" id="searcher" placeholder="Cerca anime..." >
         <div class="separator" id="DragonBall" style="height: 80px; background-color: none;"></div>

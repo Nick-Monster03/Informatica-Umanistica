@@ -136,6 +136,10 @@ main .container{
     text-decoration: none !important;
     color: #ffffff !important;
 }
+.image-item>a>img{
+    width: 150px; 
+    height: 200px;
+}
 .image-item span:hover{
     transform: scale(1.15);
     transition: transform 0.4s;
