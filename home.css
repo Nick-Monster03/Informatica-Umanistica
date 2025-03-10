@@ -119,6 +119,7 @@ main .container{
 }
 .container img{
     height: 200px;
+    width: 100%;;
 }
 .image-item{
     display: flex;
@@ -200,11 +201,10 @@ footer{
     transition: 0.3s;
 }
 .icon:hover {
-    color: #007bff;
+    color: #007bff !important;
+    transition: 0.3s;
 }
 #contatti span:hover{
+    transition: 0.3s;
     color: #007bff;
-}
-@media (max-width: 768px) {
-    
 }

@@ -13,12 +13,17 @@
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="home.html">&lt; Home</a></li>
+          <li><a class="dropdown-item" href="#studio">MAPPA</a></li>
           <li><a class="dropdown-item" href="#aot">L' attaco dei Giganti</a></li>
           <li><a class="dropdown-item" href="#banana">Banana Fish</a></li>
           <li><a class="dropdown-item" href="#dororo">Dororo</a></li>
-          <li><a class="dropdown-item" href="#js">jujutsu Keisen</a></li>
+          <li><a class="dropdown-item" href="#jk">jujutsu Keisen</a></li>
           <li><a class="dropdown-item" href="#vs">Vinland Saga</a></li>
         </ul>
+    </div>
+    <div style="margin-bottom: 10px; text-align: left; position:absolute; top: 30px; left: 250px;" class="breadcrumb">
+        <a href="home.html" style="color: grey; "> Home </a>
+        <p style="display: inline; color: white; margin-left: 3px;"> &gt; Mappa</p>
     </div>
     <h1 id="studio">MAPPA</h1>
     <main>
@@ -36,7 +41,39 @@
                 </div>
             </div>
         </div>
-        <h3 style="margin-top: 70px; margin-bottom: 30px; font-family: 'Comic Sans MS', 'Comic Sans', cursive; font-size: 1.5em;">Date di uscita degli anime in ordine temporale</h3>
+        
+    
+        <div style="display: flex; flex-direction: row; gap: 20px; align-items: center; margin-top: 70px; margin-bottom: 30px;">
+            <h3 >Date di uscita degli anime in ordine temporale</h3>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#dateModal" style="color: white !important;">
+            Filtro per Data
+            </button>
+        </div>
+        <div class="modal fade" id="dateModal" tabindex="-1" aria-labelledby="dateModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="dateModalLabel" >Filtra per Data</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#" method="get">
+                            <div class="mb-3">
+                                <label for="start-date" class="form-label">Data di inizio:</label>
+                                <input type="date" class="form-control" id="start-date" name="start-date">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label for="end-date" class="form-label">Data di fine:</label>
+                                <input type="date" class="form-control" id="end-date" name="end-date">
+                            </div>
+    
+                            <button type="submit" class="btn btn-primary w-100" style="background-color: rgb(117, 221, 229); border: 1px solid rgb(117, 221, 229); ">Applica Filtro</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="timeline">
             <ol>
             <li onclick="toggleEvent('event1')">
@@ -69,19 +106,18 @@
         </section>
         <input type="search" id="searcher" placeholder="Cerca anime..." >
         <div class="separator" id="aot" style="height: 80px; background-color: none;"></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Mappa</a><a> > L' Attacco Dei Giganti</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="images/Mappa/AOT.jpg" class="img-fluid rounded-start" alt="...">
+                    <a href="item.html"><img src="images/attackOnTitan.jpg" class="img-fluid rounded-start" alt="..."></a>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h3 class="card-title">L' Attacco Dei Giganti</h3>
+                        <a href="item.html"><h3 class="card-title">L' Attacco Dei Giganti</h3></a>
                         <p class="card-text">Eren è un ragazzo di 10 anni che vive in un mondo in cui l' umanità si è quassi istinta a causa della comparsa 100 anni prima dei giganti, strane creature nude prive di intelligenza e alcuni organi vitali
                             come un apparato riproduttore o un sistema digerente, temuti per le loro grandi dimensioni (dai 5 ai 15 mentri) e per la loro fame di carne umana. L' umanità si è rifugiata in tre cinte di mure concentriche troppo alte per essere oltrepassate dai giganti 
-                            ma in cui Eren si sente in gabbia. Un giorno un gigante di 60 mentri sfonda queste mura e rade al suolo il vollaggio di Eren uccidento quasi tutti gli abitanti tra cui la madre di Eren. Qualche hanno dopo Eren diventa un soldato e insieme alla sorella adottiva Mikasa
-                            (che sembra tenre particolarmente ad Eren) e al suo migliore amico Armin cerchreanno di scoprire quale segreto si aggira intorno alla comparsa dei giganti. Fondamentale sarà la chiave della cantina lasciata ad Eren da suo padre, misteriosamente comparso
+                            ma in cui Eren si sente come in gabbia. Un giorno un gigante di 60 mentri sfonda queste mura e rade al suolo il vollaggio di Eren uccidento quasi tutti gli abitanti tra cui la madre di quest' ultimo. Qualche anno dopo Eren diventa un soldato e insieme alla sorella adottiva Mikasa
+                            (che sembra tenere particolarmente al nostro protagonista) e al suo migliore amico Armin cercheranno di scoprire quale segreto si aggira intorno alla comparsa dei giganti. Fondamentale sarà la chiave della cantina lasciata ad Eren da suo padre, misteriosamente comparso
                             dopo l' attacco del gigante di 60 metri, e che sembra contenere il segreto celato dietro il mistero dei giganti. 
                         </p>
                     </div>
@@ -90,7 +126,6 @@
         </div>
         <div class="separator" id="banana" style="height: 80px; background-color: none;"></div>
         <!--breadcrumbs-->
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Mappa</a><a> > Banana Fish</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-8">
@@ -109,7 +144,6 @@
             </div>
         </div> 
         <div class="separator" id="dororo" style="height: 80px; background-color: none;"></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Mappa</a><a> > Dororo</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -128,7 +162,6 @@
             </div>
         </div> 
         <div class="separator" id="jk" style="height: 80px; background-color: none;"></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Mappa</a><a> > jujutsu Kaisen</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-8">
@@ -147,7 +180,6 @@
             </div>
         </div>
         <div class="separator" id="vs" style="height: 80px; background-color: none;"></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Mappa</a><a> > Vinland Saga</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -166,5 +198,12 @@
             </div>
         </div>
     </main>
+    <ul class="pagination">
+        <li class="disabled"><a href="#">Precedente</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">...</a></li>
+        <li><a href="#">Successivo</a></li>
+    </ul>
 </body>
 </html>

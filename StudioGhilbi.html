@@ -12,12 +12,17 @@
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="home.html">&lt; Home</a></li>
+          <li><a class="dropdown-item" href="#studio">Studio Ghilbi</a></li>
           <li><a class="dropdown-item" href="#Totoro">Il mio vicino Totoro</a></li>
           <li><a class="dropdown-item" href="#Howl">Il castello errante di Howl</a></li>
           <li><a class="dropdown-item" href="#Monokoke">Principessa Monokoke</a></li>
           <li><a class="dropdown-item" href="#Kiki">Kiki - Consegne a domicilio</a></li>
           <li><a class="dropdown-item" href="#Citta">La cottà incantata</a></li>
         </ul>
+    </div>
+    <div style="margin-bottom: 10px; text-align: left; position:absolute; top: 30px; left: 250px;" class="breadcrumb">
+        <a href="home.html" style="color: grey; "> Home </a>
+        <p style="display: inline; color: white; margin-left: 3px;"> &gt; Studio Ghilbi</p>
     </div>
     <h1 id="studio">Studio Ghilbi</h1>
     <main>
@@ -33,6 +38,37 @@
                             A testimoniare la grandezza dei suoi film sono sicuramenti i risultati cinematografici raggiunti come "Kiki consegne a domicilio" pellicola con maggiore incasso del 1989, nel 2002 "La città incantata" vince l'Orso d'oro al Festival internazionale del cinema di Berlino e, nel 2003, il Premio Oscar come Miglior film d'animazione.
                             Lo studio è ancora in attività anche se alcuni dei sui fondatori o delle loro figure di maggiore spicco ormai si sono ritirate.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 20px; align-items: center; margin-top: 70px; margin-bottom: 30px;">
+            <h3 >Date di uscita degli anime in ordine temporale</h3>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#dateModal" style="color: white !important;">
+            Filtro per Data
+            </button>
+        </div>
+        <div class="modal fade" id="dateModal" tabindex="-1" aria-labelledby="dateModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="dateModalLabel" >Filtra per Data</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#" method="get">
+                            <div class="mb-3">
+                                <label for="start-date" class="form-label">Data di inizio:</label>
+                                <input type="date" class="form-control" id="start-date" name="start-date">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label for="end-date" class="form-label">Data di fine:</label>
+                                <input type="date" class="form-control" id="end-date" name="end-date">
+                            </div>
+    
+                            <button type="submit" class="btn btn-primary w-100" style="background-color: rgb(117, 221, 229); border: 1px solid rgb(117, 221, 229); ">Applica Filtro</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -71,7 +107,6 @@
   <input type="search" id="searcher" placeholder="Cerca anime..." >
   
         <div class="separator" id="Totoro" style="height: 80px; background-color: none;"></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Studio Ghilbi</a><a> > Il mio vicino Totoro</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -90,7 +125,6 @@
         </div>
         <div class="separator" id="Howl" style="height: 80px; background-color: none;"></div>
         <!--breadcrumbs-->
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Studio Ghilbi</a><a> > Il castello errante di Howl</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-8">
@@ -109,7 +143,6 @@
             </div>
         </div> 
         <div class="separator" id="Mononoke" style="height: 80px; background-color: none;"></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Studio Ghilbi</a><a> > Principessa Monokoke</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -126,7 +159,6 @@
             </div>
         </div> 
         <div class="separator" id="Kiki" style="height: 80px; background-color: none;"></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Studio Ghilbi</a><a> > Kiki - consegne a domicilio</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-8">
@@ -143,7 +175,6 @@
             </div>
         </div>
         <div class="separator" id="Citta" style="height: 80px; background-color: none;"></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Studio Ghilbi</a><a> > La città incantata</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -162,5 +193,12 @@
             </div>
         </div>
     </main>
+    <ul class="pagination">
+        <li class="disabled"><a href="#">Precedente</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">...</a></li>
+        <li><a href="#">Successivo</a></li>
+    </ul>
 </body>
 </html>

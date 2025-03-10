@@ -89,6 +89,7 @@ section>div{
     height: 40px;
     width: 50%;
 }
+
 .modal-body{
     display: flex;
     flex-direction: column;

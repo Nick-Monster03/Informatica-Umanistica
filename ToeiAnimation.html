@@ -12,12 +12,17 @@
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="home.html">&lt; Home</a></li>
+          <li><a class="dropdown-item" href="#studio">Toei Animation</a></li>
           <li><a class="dropdown-item" href="#DragonBall">Dragon Ball Z</a></li>
           <li><a class="dropdown-item" href="#Ken">ken il guerriero</a></li>
           <li><a class="dropdown-item" href="#OnePiece">One Piece</a></li>
           <li><a class="dropdown-item" href="#SailorMoon">Sailor Moon</a></li>
           <li><a class="dropdown-item" href="#Cavalieri">I Cavalieri dello zodiaco</a></li>
         </ul>
+    </div>
+    <div style="margin-bottom: 10px; text-align: left; position:absolute; top: 30px; left: 250px;" class="breadcrumb">
+        <a href="home.html" style="color: grey; "> Home </a>
+        <p style="display: inline; color: white; margin-left: 3px;"> &gt; Toei Animation</p>
     </div>
     <h1 id="studio">Toei Animation</h1>
     <main>
@@ -34,7 +39,37 @@
                 </div>
             </div>
         </div>
-        <h3 style="margin-top: 70px; margin-bottom: 30px; font-family: 'Comic Sans MS', 'Comic Sans', cursive; font-size: 1.5em;">Date di uscita degli anime in ordine temporale</h3>
+        <div style="display: flex; flex-direction: row; gap: 20px; align-items: center; margin-top: 70px; margin-bottom: 30px;">
+            <h3 >Date di uscita degli anime in ordine temporale</h3>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#dateModal" style="color: white !important;">
+            Filtro per Data
+            </button>
+        </div>
+        <div class="modal fade" id="dateModal" tabindex="-1" aria-labelledby="dateModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="dateModalLabel" >Filtra per Data</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#" method="get">
+                            <div class="mb-3">
+                                <label for="start-date" class="form-label">Data di inizio:</label>
+                                <input type="date" class="form-control" id="start-date" name="start-date">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label for="end-date" class="form-label">Data di fine:</label>
+                                <input type="date" class="form-control" id="end-date" name="end-date">
+                            </div>
+    
+                            <button type="submit" class="btn btn-primary w-100" style="background-color: rgb(117, 221, 229); border: 1px solid rgb(117, 221, 229); ">Applica Filtro</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="timeline">
             <ol>
             <li onclick="toggleEvent('event1')">
@@ -67,7 +102,6 @@
         </section>
         <input type="search" id="searcher" placeholder="Cerca anime..." >
         <div class="separator" id="DragonBall" style="height: 80px; background-color: none;"></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Toei Animation</a><a> > Dragon Ball Z</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -88,7 +122,6 @@
         </div>
         <div class="separator" id="Ken" style="height: 80px; background-color: none;"></div>
         <!--breadcrumbs-->
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Toei Animation</a><a> > Ken il guerriero</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-8">
@@ -106,7 +139,6 @@
             </div>
         </div> 
         <div class="separator" id="OnePiece" style="height: 80px; background-color: none;"></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Toei Animation</a><a> > One Piece</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -125,7 +157,6 @@
             </div>
         </div> 
         <div class="separator" id="SailorMoon" style="height: 80px; background-color: none; " ></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Toei Animation</a><a> > Sailor Moon</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-8">
@@ -144,7 +175,6 @@
             </div>
         </div>
         <div class="separator" id="Cavalieri" style="height: 80px; background-color: none;"></div>
-        <div style="margin-bottom: 10px; text-align: left; width: 1040px;"><a href="home.html">Home</a><a href="#studio"> > Toei Animation</a><a> > I Cavalieri dello zodiaco</a></div>
         <div class="card mb-3"  style="max-width: 1040px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -163,5 +193,12 @@
             </div>
         </div>
     </main>
+    <ul class="pagination">
+        <li class="disabled"><a href="#">Precedente</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">...</a></li>
+        <li><a href="#">Successivo</a></li>
+    </ul>
 </body>
 </html>
