@@ -109,3 +109,38 @@ select {
     padding: 5px;
     border-radius: 5px;
 }
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-image {
+        width: 100%;
+        margin: 0;
+    }
+    .main-image img {
+        width: 90%;
+        margin-left: 0;
+    }
+    .details {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+    .stream-btn {
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+    }
+   
+    .image-item img {
+        width: 80px;
+        height: 50px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

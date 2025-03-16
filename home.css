@@ -107,7 +107,7 @@ main>div:not(.separator) {
     padding: 10px 10px;
 }
 
-main .container{
+main .container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -115,7 +115,7 @@ main .container{
     width: 100%;
     height: 250px;
     gap: 20px;
-    padding: 20px 20px;    
+    padding: 20px 20px;
 }
 .container img{
     height: 200px;
@@ -207,4 +207,77 @@ footer{
 #contatti span:hover{
     transition: 0.3s;
     color: #007bff;
+}
+
+@media (max-width: 768px) {
+    header > h1 {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    header .navbar {
+        display: none;
+    }
+    main {
+        margin-top: 150px;
+        gap: 30px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: auto;
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+        ::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
+        }
+        width: auto !important;
+        height: 250px !important;
+        overflow-y: hidden;
+    }
+
+    .container .image-item {
+        width: 80%; /* Puoi regolare la larghezza delle immagini per adattarle meglio */
+        margin-bottom: 20px; /* Distanza tra gli item */
+    }
+
+    .container img {
+        width: 100%; /* Le immagini occupano tutta la larghezza del container */
+        height: auto; /* Mantieni le proporzioni delle immagini */
+    }
+    .image-item {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .image-item a {
+        gap: 10px;
+    }
+
+    footer {
+        margin-top: 30px;
+        height: auto;
+        font-size: 1em;
+    }
+
+    #contatti {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #contatti p {
+        font-size: 1.5em;
+        display: none;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons a {
+        font-size: 1.2em;
+    }
 }

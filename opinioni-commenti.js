@@ -65,6 +65,23 @@ function stampa10(){
             p.innerHTML= commento;
             div.appendChild(p);
         
+            let azioniDiv = document.createElement('div');
+            azioniDiv.className = 'azioni-commento';
+
+            // Pulsante "Rispondi"
+            let rispondiBtn = document.createElement('span');
+            rispondiBtn.innerHTML = '↩️ Rispondi';
+            rispondiBtn.className = 'rispondi';
+            azioniDiv.appendChild(rispondiBtn);
+
+            // Pulsante "Visualizza risposte"
+            let visualizzaRisposteBtn = document.createElement('span');
+            visualizzaRisposteBtn.innerHTML = '⬇️ Visualizza risposte';
+            visualizzaRisposteBtn.className = 'visualizza-risposte';
+            visualizzaRisposteBtn.setAttribute('style', 'margin-left: 20px;');
+            azioniDiv.appendChild(visualizzaRisposteBtn);
+
+            div.appendChild(azioniDiv);
             sezione.appendChild(div);
             // count++;
         });
@@ -84,9 +101,7 @@ function aggiungi(){
     let nickname= document.getElementById('nickname').value;
     let anime=document.getElementById('anime').value;
     let commento=document.getElementById('commento').value;
-    // console.log('Nickname:', nickname);
-    // console.log('Anime:', anime);
-    // console.log('Commento:', commento);
+  
 
     if(nickname=='' || anime=='' || commento==''){
         alert('Compila tutti i campi');
@@ -123,7 +138,24 @@ function aggiungi(){
         let p= document.createElement('p');
         p.innerHTML= commento;
         div.appendChild(p);
-    
+
+        let azioniDiv = document.createElement('div');
+        azioniDiv.className = 'azioni-commento';
+
+        // Pulsante "Rispondi"
+        let rispondiBtn = document.createElement('span');
+        rispondiBtn.innerHTML = '↩️ Rispondi';
+        rispondiBtn.className = 'rispondi';
+        azioniDiv.appendChild(rispondiBtn);
+
+        // Pulsante "Visualizza risposte"
+        let visualizzaRisposteBtn = document.createElement('span');
+        visualizzaRisposteBtn.innerHTML = '⬇️ Visualizza risposte';
+        visualizzaRisposteBtn.className = 'visualizza-risposte';
+        visualizzaRisposteBtn.setAttribute('style', 'margin-left: 20px;');
+        azioniDiv.appendChild(visualizzaRisposteBtn);
+
+        div.appendChild(azioniDiv);
         sezione.appendChild(div);
         id_commento++;
 

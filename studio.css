@@ -187,7 +187,7 @@ input[type='search']{
   transition: background-color 0.3s, color 0.3s;
 }
 
-.pagination a:hover {
+.pagination li:not(.disabled) a:hover {
   background-color: rgb(117, 221, 229);
   color: white;
 }
@@ -204,60 +204,124 @@ input[type='search']{
 .modal{
   color: black !important;
 }
-/* GENERAL MEDIA QUERIES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (max-width: 599px) {
-  .timeline ol,
-  .timeline ol li {
-    width: auto;
-  }
 
-  .timeline ol {
-    padding: 0;
-    transform: none !important;
-  }
+  @media screen and (max-width: 768px) {
+    /* Modifiche per la timeline */
+    .timeline ol {
+        padding: 0;
+        transform: none !important;
+    }
 
-  .timeline ol li {
-    display: block;
-    height: auto;
-    background: transparent;
-  }
+    .timeline ol li {
+        display: block;
+        height: auto;
+        background: transparent;
+        margin-bottom: 20px; /* Aggiungi un po' di spazio tra gli elementi della timeline */
+    }
 
-  .timeline ol li:first-child {
-    margin-top: 25px;
-  }
+    .timeline ol li:first-child {
+        margin-top: 25px;
+    }
 
-  .timeline ol li:not(:first-child) {
-    margin-left: auto;
-  }
+    .timeline ol li div {
+        position: static;
+        width: 94%;
+        height: auto !important;
+        margin: 0 auto 25px;
+    }
 
-  .timeline ol li div {
-    position: static;
-    width: 94%;
-    height: auto !important;
-    margin: 0 auto 25px;
-  }
+    .timeline ol li:nth-child(odd) div {
+        transform: none;
+    }
 
-  .timeline ol li:nth-child(odd) div {
-    transform: none;
-  }
+    /* Allineamento e posizionamento dei tooltip */
+    .timeline ol li:nth-child(odd) div::before,
+    .timeline ol li:nth-child(even) div::before {
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+        border: none;
+        border-left: 1px solid white;
+        height: 25px;
+    }
 
-  .timeline ol li:nth-child(odd) div::before,
-  .timeline ol li:nth-child(even) div::before {
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    border: none;
-    border-left: 1px solid white;
-    height: 25px;
-  }
+    /* Nascondi le frecce della timeline */
+    .timeline ol li:last-child,
+    .timeline ol li:nth-last-child(2) div::before,
+    .timeline ol li:not(:last-child)::after,
+    .timeline .arrows {
+        display: none;
+    }
 
-  .timeline ol li:last-child,
-  .timeline ol li:nth-last-child(2) div::before,
-  .timeline ol li:not(:last-child)::after,
-  .timeline .arrows {
-    display: none;
-  }
+    /* Ottimizzazioni per la ricerca */
+    input[type='search'] {
+        width: 80%; /* Aumenta la larghezza della ricerca su schermi piccoli */
+        height: 35px; /* Riduci leggermente l'altezza */
+        margin-top: 20px;
+    }
+
+    /* Modifica la navigazione a pagine */
+    .pagination {
+        flex-direction: column; /* Imposta i link di paginazione su una colonna */
+        align-items: center;
+    }
+
+    .pagination li {
+        margin: 5px 0; /* Riduci il margine tra i link di paginazione */
+    }
+
+    .pagination a {
+        padding: 8px 12px; /* Riduci la dimensione del padding per la paginazione */
+        font-size: 14px; /* Font più piccolo per la paginazione */
+    }
+
+    /* Modifiche al corpo */
+    body {
+      padding-top: 15px;
+      gap: 20px;
+    }
+
+    /* Modifiche alla card */
+    .card {
+      padding: 15px; /* Aumenta il padding per le card su schermi più piccoli */
+    }
+
+    /* Modifiche alla larghezza del main */
+    main {
+      width: 100vw;
+      padding: 10px; /* Aggiungi un po' di padding per migliorare il layout */
+    }
+
+    /* Titolo più piccolo */
+    h1 {
+      font-size: 40px !important; /* Riduci la dimensione del titolo su schermi piccoli */
+    }
+
+    /* Rimuovi il menu dropdown */
+    .dropdown {
+      display: none !important;
+    }
+
+    /* Immagini a larghezza piena */
+    img {
+      width: 100% !important;
+      height: auto !important;
+    }
+    .breadcrumb {
+      position: absolute !important;
+      top: 10px !important;
+      left: 10px !important;
+    }
+    .card .mb-3{
+      width: 90% !important;
+    }
+    .pagination {
+      flex-direction: row; /* Mantieni i link di paginazione in una riga */
+      justify-content: center; /* Centra i link di paginazione */
+    }
 }
+
+
+
 
 

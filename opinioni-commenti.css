@@ -178,3 +178,77 @@ section>div{
     color: grey;
     border-color: grey;
   }
+  @media screen and (max-width: 768px) {
+    body {
+        padding: 15px; /* Riduce il padding generale */
+        gap: 30px; /* Diminuisce la distanza tra gli elementi */
+    }
+
+    h1 {
+        font-size: 28px; /* Riduce la dimensione del titolo */
+    }
+
+    .breadcrumb {
+        position: static;
+        text-align: center;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    #home {
+        font-size: 14px;
+        position: static;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #searcher {
+        width: 100%; /* Campo di ricerca a larghezza piena */
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .modal-dialog {
+        width: 95%; /* Modale più largo su schermi piccoli */
+    }
+
+    .btn {
+        width: 100%; /* Rende i pulsanti più facili da cliccare */
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .commento {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .commento h3 {
+        font-size: 18px;
+    }
+
+    .commento h5 {
+        font-size: 14px;
+    }
+
+    .commento p {
+        font-size: 13px;
+    }
+
+    .azioni-commento {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        font-size: 14px;
+    }
+}
