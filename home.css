@@ -261,23 +261,13 @@ footer{
         height: auto;
         font-size: 1em;
     }
-
-    #contatti {
-        flex-direction: column;
-        padding: 10px;
-    }
-
     #contatti p {
-        font-size: 1.5em;
         display: none;
     }
-
-    .social-icons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .social-icons a {
         font-size: 1.2em;
+    }
+    .nosmall{
+        display: none;
     }
 }

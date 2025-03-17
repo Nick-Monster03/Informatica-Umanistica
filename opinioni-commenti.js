@@ -72,13 +72,21 @@ function stampa10(){
             let rispondiBtn = document.createElement('span');
             rispondiBtn.innerHTML = '↩️ Rispondi';
             rispondiBtn.className = 'rispondi';
+            rispondiBtn.style.cursor = 'pointer';
+            rispondiBtn.addEventListener('click', () => {
+                // Non fare nulla
+            });
             azioniDiv.appendChild(rispondiBtn);
 
             // Pulsante "Visualizza risposte"
             let visualizzaRisposteBtn = document.createElement('span');
             visualizzaRisposteBtn.innerHTML = '⬇️ Visualizza risposte';
             visualizzaRisposteBtn.className = 'visualizza-risposte';
-            visualizzaRisposteBtn.setAttribute('style', 'margin-left: 20px;');
+            visualizzaRisposteBtn.style.cursor = 'pointer';
+            visualizzaRisposteBtn.style.marginLeft = '20px';
+            visualizzaRisposteBtn.addEventListener('click', () => {
+                // Non fare nulla
+            });
             azioniDiv.appendChild(visualizzaRisposteBtn);
 
             div.appendChild(azioniDiv);
@@ -146,13 +154,21 @@ function aggiungi(){
         let rispondiBtn = document.createElement('span');
         rispondiBtn.innerHTML = '↩️ Rispondi';
         rispondiBtn.className = 'rispondi';
+        rispondiBtn.style.cursor = 'pointer';
+        rispondiBtn.addEventListener('click', () => {
+            // Non fare nulla
+        });
         azioniDiv.appendChild(rispondiBtn);
 
         // Pulsante "Visualizza risposte"
         let visualizzaRisposteBtn = document.createElement('span');
         visualizzaRisposteBtn.innerHTML = '⬇️ Visualizza risposte';
         visualizzaRisposteBtn.className = 'visualizza-risposte';
+        visualizzaRisposteBtn.style.cursor = 'pointer';
         visualizzaRisposteBtn.setAttribute('style', 'margin-left: 20px;');
+        visualizzaRisposteBtn.addEventListener('click', () => {
+            // Non fare nulla
+        });
         azioniDiv.appendChild(visualizzaRisposteBtn);
 
         div.appendChild(azioniDiv);

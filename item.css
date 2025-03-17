@@ -125,11 +125,21 @@ select {
     .main-image img {
         width: 90%;
         margin-left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     .details {
         width: 100%;
         padding-left: 0;
         text-align: center;
+    }
+    .details p {
+        text-align: left;
+        margin-left: 20%;
+    }
+    .details p:last-child {
+        text-align: center !important;
     }
     .stream-btn {
         width: 100%;
