@@ -92,6 +92,9 @@ main{
 img{
   height: 100% !important;
 }
+.justify-content-center{
+  width: 1024px !important;
+}
 
 .timeline {
     /* white-space: nowrap;
@@ -206,6 +209,9 @@ input[type='search']{
 }
 
   @media screen and (max-width: 768px) {
+    .justify-content-center{
+      width: 100% !important;
+    }
     /* Modifiche per la timeline */
     .timeline ol {
         padding: 0;

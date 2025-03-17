@@ -33,38 +33,114 @@
 
             </div>
         </div>
-        <h1>Ascolta le opinioni di: </h1>
-        <div class="filter">
-            <label for="rating">Seleziona valutazione: </label>
-            <select id="rating">
-                <option value="all">Tutte</option>
-                <option value="5">★★★★★</option>
-                <option value="4">★★★★☆</option>
-                <option value="3">★★★☆☆</option>
-                <option value="2">★★☆☆☆</option>
-                <option value="1">★☆☆☆☆</option>
-            </select>
-        </div>
-        <div class="usersInfo">
-            <div class="image-item">
-                <img src="images/play_video.jpg" alt="Miniatura">
-                <div style="display: flex; flex-direction: column; gap: 5px;">
-                    <span>Aldo Baglio</span>
-                    <span>★★★☆☆</span>
+        <div class="container mt-4">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="opinioni-tab" data-bs-toggle="tab" data-bs-target="#opinioni" type="button" role="tab">Opinioni Utenti</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="personaggi-tab" data-bs-toggle="tab" data-bs-target="#personaggi" type="button" role="tab">Personaggi</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="colonne-sonore" data-bs-toggle="tab" data-bs-target="#sound" type="button" role="tab">Colonne sonore</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="manga" data-bs-toggle="tab" data-bs-target="#trama" type="button" role="tab">Trama</button>
+                </li>
+            </ul>
+        
+            <div class="tab-content mt-3" id="myTabContent">
+                <div class="tab-pane fade show active" id="opinioni" role="tabpanel">
+                    <h1>Ascolta le opinioni di: </h1>
+                    <div class="filter">
+                        <label for="rating">Seleziona valutazione: </label>
+                        <select id="rating">
+                            <option value="all">Tutte</option>
+                            <option value="5">★★★★★</option>
+                            <option value="4">★★★★☆</option>
+                            <option value="3">★★★☆☆</option>
+                            <option value="2">★★☆☆☆</option>
+                            <option value="1">★☆☆☆☆</option>
+                        </select>
+                    </div>
+                    <div class="usersInfo">
+                        <div class="image-item">
+                            <img src="images/play_video.jpg" alt="Miniatura">
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <span>Aldo Baglio</span>
+                                <span>★★★☆☆</span>
+                            </div>
+                        </div>
+                        <div class="image-item">
+                            <img src="images/play_video.jpg" alt="Miniatura">
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <span>Topolino</span>
+                                <span>★★★★★</span>
+                        </div>
+                        </div>
+                        <div class="image-item">
+                            <img src="images/play_video.jpg" alt="Miniatura">
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <span>Capitan Findus</span>
+                                <span>★☆☆☆☆</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="image-item">
-                <img src="images/play_video.jpg"" alt="Miniatura">
-                <div style="display: flex; flex-direction: column; gap: 5px;">
-                    <span>Topolino</span>
-                    <span>★★★★★</span>
-            </div>
-            </div>
-            <div class="image-item">
-                <img src="images/play_video.jpg" alt="Miniatura">
-                <div style="display: flex; flex-direction: column; gap: 5px;">
-                    <span>Capitan Findus</span>
-                    <span>★☆☆☆☆</span>
+                <div class="tab-pane fade" id="personaggi" role="tabpanel">
+                    <div class="container text-center">
+                        <h2 class="mb-3">Personaggi Principali di Attack on Titan</h2>
+                
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-sm-4 col-md-2 character-card">
+                                <img src="images/personaggi/eren.jpg" alt="Eren">
+                                <p>Eren Yeager</p>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 character-card">
+                                <img src="images/personaggi/mikasa.webp" alt="Mikasa">
+                                <p>Mikasa Ackerman</p>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 character-card">
+                                <img src="images/personaggi/armin.jpg" alt="Armin">
+                                <p>Armin Arlert</p>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 character-card">
+                                <img src="images/personaggi/levi.webp" alt="Levi">
+                                <p>Levi Ackerman</p>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 character-card">
+                                <img src="images/personaggi/reiner.webp" alt="Reiner">
+                                <p>Reiner Braun</p>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 character-card">
+                                <img src="images/personaggi/zeke.jpg" alt="Zeke">
+                                <p>Zeke Yeager</p>
+                            </div>
+                        </div>
+                        <div class="arrow-down mt-4">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="sound" role="tabpanel">
+                    <h1>Sound Tacks</h1>
+                    <ol>
+                        <li><strong>"Guren no Yumiya"</strong> – Linked Horizon (Opening 1)</li>
+                        <li><strong>"Shinzou wo Sasageyo!"</strong> – Linked Horizon (Opening 3)</li>
+                        <li><strong>"Vogel im Käfig"</strong> – Hiroyuki Sawano </li>
+                        <li><strong>"The Rumbling"</strong> – SiM (Opening Stagione 4 Parte 2)</li>
+                        <li><strong>"Call of Silence"</strong> – Hiroyuki Sawano ft. Gemie </li>
+                        <li><strong>"Ashes on The Fire"</strong> – KOHTA YAMAMOTO </li>
+                    </ol>
+                    <div class="arrow-down mt-4">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="trama" role="tabpanel">
+                    <h1>Trama</h1>
+                    <p>La storia (ispirata all' omonimo manga <a href="#">Attack On Titan</a>) è ambientata in un mondo in cui l'umanità è stata quasi sterminata da giganteschi e misteriosi umanoidi noti come "Titani". Questi Titani misurano da pochi metri a oltre 15 metri di altezza, e sembrano divorare gli umani senza un motivo apparente. I sopravvissuti all'attacco dell'umanità si sono rifugiati in una città circondata da mura difensive, alta oltre 50 metri, che ha mantenuto i Titani fuori dalla città per oltre un secolo. </p>
+                    <p>La storia segue Eren Yeager, la sorella adottiva Mikasa Ackerman e l'amico d'infanzia Armin Arlert, che si uniscono all'esercito per combattere i Titani dopo che la loro città natale è stata distrutta e la madre di Eren è stata uccisa. </p>
                 </div>
             </div>
         </div>
