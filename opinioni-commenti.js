@@ -70,7 +70,7 @@ function stampa10(){
 
             // Pulsante "Rispondi"
             let rispondiBtn = document.createElement('span');
-            rispondiBtn.innerHTML = '↩️ Rispondi';
+            rispondiBtn.innerHTML = `<i class="bi bi-reply"></i> Rispondi`;
             rispondiBtn.className = 'rispondi';
             rispondiBtn.style.cursor = 'pointer';
             rispondiBtn.addEventListener('click', () => {
@@ -80,7 +80,7 @@ function stampa10(){
 
             // Pulsante "Visualizza risposte"
             let visualizzaRisposteBtn = document.createElement('span');
-            visualizzaRisposteBtn.innerHTML = '⬇️ Visualizza risposte';
+            visualizzaRisposteBtn.innerHTML = `<i class="bi-caret-down-fill"></i> Visualizza risposte`;
             visualizzaRisposteBtn.className = 'visualizza-risposte';
             visualizzaRisposteBtn.style.cursor = 'pointer';
             visualizzaRisposteBtn.style.marginLeft = '20px';
@@ -88,6 +88,28 @@ function stampa10(){
                 // Non fare nulla
             });
             azioniDiv.appendChild(visualizzaRisposteBtn);
+
+            // Pulsante "Segnala"
+            let segnalaDiv = document.createElement('div');
+            segnalaDiv.style.display = 'inline-block';
+            segnalaDiv.style.float = 'right';
+
+            let segnalaIcon = document.createElement('span');
+            segnalaIcon.innerHTML = "<i class='bi-x-lg'></i>";
+            segnalaIcon.style.color = 'red';
+            segnalaIcon.style.cursor = 'pointer';
+            segnalaDiv.appendChild(segnalaIcon);
+
+            let segnalaText = document.createElement('span');
+            segnalaText.innerHTML = ' Segnala';
+            segnalaText.style.cursor = 'pointer';
+            segnalaDiv.appendChild(segnalaText);
+
+            segnalaDiv.addEventListener('click', () => {
+                alert('Commento segnalato!');
+            });
+
+            azioniDiv.appendChild(segnalaDiv);
 
             div.appendChild(azioniDiv);
             sezione.appendChild(div);
@@ -152,7 +174,7 @@ function aggiungi(){
 
         // Pulsante "Rispondi"
         let rispondiBtn = document.createElement('span');
-        rispondiBtn.innerHTML = '↩️ Rispondi';
+        rispondiBtn.innerHTML = `<i class="bi bi-reply"></i> Rispondi`;
         rispondiBtn.className = 'rispondi';
         rispondiBtn.style.cursor = 'pointer';
         rispondiBtn.addEventListener('click', () => {
@@ -162,7 +184,7 @@ function aggiungi(){
 
         // Pulsante "Visualizza risposte"
         let visualizzaRisposteBtn = document.createElement('span');
-        visualizzaRisposteBtn.innerHTML = '⬇️ Visualizza risposte';
+        visualizzaRisposteBtn.innerHTML = `<i class="bi-caret-down-fill"></i> Visualizza risposte`;
         visualizzaRisposteBtn.className = 'visualizza-risposte';
         visualizzaRisposteBtn.style.cursor = 'pointer';
         visualizzaRisposteBtn.setAttribute('style', 'margin-left: 20px;');
@@ -170,6 +192,28 @@ function aggiungi(){
             // Non fare nulla
         });
         azioniDiv.appendChild(visualizzaRisposteBtn);
+
+        // Pulsante "Segnala"
+        let segnalaDiv = document.createElement('div');
+        segnalaDiv.style.display = 'inline-block';
+        segnalaDiv.style.float = 'right';
+
+        let segnalaIcon = document.createElement('span');
+        segnalaIcon.innerHTML = "<i class='bi-x-lg'></i>";
+        segnalaIcon.style.color = 'red';
+        segnalaIcon.style.cursor = 'pointer';
+        segnalaDiv.appendChild(segnalaIcon);
+
+        let segnalaText = document.createElement('span');
+        segnalaText.innerHTML = ' Segnala';
+        segnalaText.style.cursor = 'pointer';
+        segnalaDiv.appendChild(segnalaText);
+
+        segnalaDiv.addEventListener('click', () => {
+            alert('Commento segnalato!');
+        });
+
+        azioniDiv.appendChild(segnalaDiv);
 
         div.appendChild(azioniDiv);
         sezione.appendChild(div);

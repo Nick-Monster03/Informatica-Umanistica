@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -12,6 +14,10 @@ body {
     overflow: auto;
     background-color: black !important; 
     text-align: center;
+    font-family: 'Poppins', sans-serif ;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Oswald', sans-serif !important;
 }
 a{
     text-decoration: none !important;
