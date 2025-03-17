@@ -83,7 +83,7 @@ header .navbar a{
 header .navbar a:hover{
     text-decoration: none;
     transform: scale(1.25);
-    color: #ffffff;
+    color: rgb(117, 221, 229) !important;
     transition: transform 0.2s;
 }
 main{
