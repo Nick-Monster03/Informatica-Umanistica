@@ -125,6 +125,9 @@ select {
     border-radius: 10px;
     transition: 0.3s;
 }
+.character-card p {
+    cursor: pointer;
+}
 .character-card p:hover{
     color: rgb(117, 221, 229);
 }
@@ -150,11 +153,11 @@ select {
     text-align: center;
     font-size: 30px;
     cursor: pointer;
-    transition: 0.3s;
 }
 .arrow-down:hover {
     color: rgb(117, 221, 229);
     background: 1px solid rgb(117, 221, 229) !important;
+    transition: 0.3s;
 }
 
 @media (max-width: 768px) {
